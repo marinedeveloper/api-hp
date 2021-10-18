@@ -1,0 +1,35 @@
+<html>
+
+<header>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cantarell&family=Fira+Mono:wght@500&display=swap" rel="stylesheet">
+</header>
+
+<body>
+
+
+
+  <div class="intro d-flex flex-column">
+    <img src="assets/ravenclaw.jpg" class="img-fluid mx-auto" style="width:43rem; height: 25rem" >
+      <h1 class=text-center>Ravenclaw</h1>
+  </div>
+
+  <h2 class="title-character text-center">Characters</h2>
+
+  <div class="flip-card d-flex flex-row flex-wrap justify-content-around w-100">
+    <div class="flip-card-inner" *ngFor="let ravenclaw of characterRavenclaw" style="width: 20rem; height: 22rem;">
+      <div class="flip-card-front">
+        <img style="width: 100%; height:22rem" src="{{ravenclaw.image}}" alt="Avatar">
+      </div>
+      <div class="flip-card-back">
+        <h1 class="name"> {{ravenclaw.name}}</h1>
+        <p>Actor : {{ravenclaw.actor}}</p>
+        <p *ngIf="ravenclaw.yearOfBirth">Birth : {{ravenclaw.yearOfBirth}}</p>
+        <!-- <div class="patronustitre text-center d-flex flex-row"  *ngIf="character.patronus">Patronus : <p class="patronus pl-2">{{character.patronus}}</p></div> -->
+      </div>
+    </div>
+  </div>

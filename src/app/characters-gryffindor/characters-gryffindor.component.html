@@ -1,0 +1,39 @@
+<html>
+
+<header>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cantarell&family=Fira+Mono:wght@500&display=swap" rel="stylesheet">
+</header>
+
+
+
+<body>
+
+
+
+      <div class="intro d-flex flex-column">
+        <img src="assets/houses.jpg" class="img-fluid mx-auto" style="width:43rem; height: 25rem" >
+          <h1 class=text-center>Harry Potter</h1>
+      </div>
+
+  <h2 class="title-character text-center">Gryffindor</h2>
+
+
+
+  <div class="card-container d-flex flex-row flex-wrap justify-content-around mb-2 ">
+    <div class="card" *ngFor="let gryffindor of characterGryffindor" style="width: 20rem">
+      <img class="card-img-top" style="width: 100%" src="{{gryffindor.image}}" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">Name : {{gryffindor.name}}</p>
+        <p class="card-text" *ngIf="gryffindor.house">House : {{gryffindor.house}}</p>
+        <p class="card-text">Actor : {{gryffindor.actor}}</p>
+        <p class="card-text">Wand : {{gryffindor.wand}}</p>
+        <div class="d-flex flex-row"  *ngIf="gryffindor.patronus">Patronus : <p class="patronus pl-2">{{gryffindor.patronus}}</p></div>
+
+      </div>
+    </div>
+  </div>

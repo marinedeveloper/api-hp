@@ -7,13 +7,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CharactersComponent } from './characters/characters.component';
 import { HousesCharactersComponent } from './houses-characters/houses-characters.component';
 import {HttpClientModule} from '@angular/common/http';
+import { CharactersSlytherinComponent } from './characters-slytherin/characters-slytherin.component';
+import { CharactersGryffindorComponent } from './characters-gryffindor/characters-gryffindor.component';
+import { CharactersRavenclawComponent } from './characters-ravenclaw/characters-ravenclaw.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CharactersComponent,
-    HousesCharactersComponent
+    HousesCharactersComponent,
+    CharactersSlytherinComponent,
+    CharactersGryffindorComponent,
+    CharactersRavenclawComponent,
+
   ],
   imports: [
     BrowserModule,

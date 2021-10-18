@@ -1,0 +1,64 @@
+$font-family1: 'Fira Mono', monospace;
+$colorYellow: rgb(255, 205, 112);
+$font-family2:'Cantarell', sans-serif;
+$colorBackround: rgb(119, 38, 38);
+
+.patronus::first-letter{
+  text-transform: uppercase;
+}
+.gender::first-letter{
+  text-transform: uppercase;
+}
+
+
+body
+{
+background-color: $colorBackround;
+}
+
+div
+{
+  margin-bottom: 2rem;
+}
+
+div .card{
+  width: 25rem;
+  background-color: $colorYellow;
+  border: solid black 0.2rem;
+
+}
+.card-img-top{
+
+
+height: 21rem;
+
+}
+.card-img-top:hover{
+
+
+height: 21rem;
+-moz-box-shadow: 0 0 10px #ccc;
+-webkit-box-shadow: 0 0 10px #ccc;
+box-shadow: 0 0 10px #ccc;
+cursor: pointer;
+
+}
+
+.card-body{
+  opacity: 2rem;
+}
+h1 {
+
+  margin: 2rem;
+  font-family: $font-family1;
+  color: $colorYellow;
+}
+h2 {
+  color: $colorYellow;
+  margin:2rem;
+  font-family: $font-family1;
+}
+
+p{
+  font-family: $font-family2;
+}

@@ -1,7 +1,7 @@
 $font-family1: 'Fira Mono', monospace;
-$colorYellow: rgb(7, 7, 7);
+$colorYellow: rgb(255, 205, 112);
 $font-family2:'Cantarell', sans-serif;
-$colorBackround: rgb(247, 244, 240);
+$colorBackround: rgb(47, 47, 194);
 
 .patronus::first-letter{
   text-transform: uppercase;
@@ -11,34 +11,23 @@ $colorBackround: rgb(247, 244, 240);
 }
 
 
-.flip-card-front > img {
-  border: 1px solid black;
-}
-
 body
 {
-margin: 0;
-padding: 0;
-
+background-color: rgb(10, 10, 27);
 }
 
 div
 {
   margin-bottom: 2rem;
-
 }
-
-
-
 
 
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
   background-color: transparent;
-  width: 100%;
-
-
+  width: 100% max-content;
+  height: 300px;
 
   // perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
@@ -56,8 +45,6 @@ div
 /* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card .flip-card-inner:hover {
   transform: rotateY(180deg);
-  cursor: pointer;
-
 }
 
 /* Position the front and back side */
@@ -73,23 +60,14 @@ div
 .flip-card-front {
   background-color: #bbb;
   color: black;
-  box-shadow: 4px 3px 3px grey;
-
-
 }
 
 /* Style the back side */
 .flip-card-back {
-  background-color: rgb(236, 197, 138);
+  background-color: $colorYellow;
   color: black;
   transform: rotateY(180deg);
-  border: 1px solid black;
-  box-shadow: 4px 3px 3px grey;
-
-
-
 }
-
 
 
 
@@ -114,10 +92,6 @@ div
 // .card-body{
 //   opacity: 2rem;
 // }
-
-.flip-card-back > h1{
-  color: black;
-}
 h1 {
 
   margin: 2rem;
