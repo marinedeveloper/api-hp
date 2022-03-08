@@ -11,10 +11,13 @@ $colorBackround: rgb(28, 51, 34);
 }
 
 
-body
-{
-background-color: $colorBackround;
-height : 2000px;
+html,
+body {
+   height: auto;
+   width: 100%;
+   margin: 0;
+  padding: 0;
+  background-color: $colorBackround;
 
 }
 

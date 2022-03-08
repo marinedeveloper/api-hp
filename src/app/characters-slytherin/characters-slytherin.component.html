@@ -24,17 +24,15 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a routerLink="/characters" routerLinkActive="active">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+            <a routerLink="/house/gryffindor" routerLinkActive="active">Gryffindor</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
+            <a routerLink="/house/ravenclaw" routerLinkActive="active">Ravenclaw</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
+
         </ul>
       </div>
     </div>
@@ -52,7 +50,7 @@
 
 
   <div class="flip-card d-flex flex-row flex-wrap justify-content-around w-100">
-    <div class="flip-card-inner" *ngFor="let character of characterSlytherin" style="width: 20rem; height: 22rem;">
+    <div class="flip-card-inner" *ngFor="let character of characterSlytherin | slice:0:9 "  style="width: 20rem; height: 22rem;">
       <div class="flip-card-front ">
         <img class="avatar" style="width: 100%; height:22rem" src="{{character.image}}" alt="Avatar">
       </div>

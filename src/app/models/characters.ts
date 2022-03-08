@@ -19,5 +19,4 @@ export interface Characters{
   alive:boolean;
   image: string;
 
-
 }

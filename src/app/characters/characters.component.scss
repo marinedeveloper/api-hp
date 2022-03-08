@@ -15,12 +15,6 @@ $colorBackround: rgb(247, 244, 240);
   border: 1px solid black;
 }
 
-body
-{
-margin: 0;
-padding: 0;
-
-}
 
 div
 {
@@ -29,7 +23,13 @@ div
 }
 
 
-
+html,
+body {
+   height: auto;
+   width: 100%;
+   margin: 0;
+padding: 0;
+}
 
 
 

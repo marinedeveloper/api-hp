@@ -13,53 +13,54 @@
 <body>
 
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <img src="assets/hogwarts_logo.png" class="img-fluid mx-auto" style="width:5rem; height: 5rem" >
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav color-light  me-auto mt-4 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link active" routerLink="/house/gryffindor" routerLinkActive="active">Gryffindor</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link active" routerLink="/house/ravenclaw" routerLinkActive="active">Ravenclaw</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
+          </ul>
       </div>
     </div>
   </nav>
 
 
 
+
+
   <div class="intro d-flex flex-column">
-    <img src="assets/houses.jpg" class="img-fluid mx-auto" style="width:43rem; height: 25rem" >
+      <img src="assets/houses.jpg" class="img-fluid mx-auto" style="width:8rem; height: 5rem" >
       <h1 class=text-center>Harry Potter</h1>
   </div>
 
   <h2 class="title-character text-center">Characters</h2>
 
-  <div class="flip-card d-flex flex-row flex-wrap justify-content-around w-100">
-    <div class="flip-card-inner" *ngFor="let character of characters" style="width: 20rem; height: 22rem;">
-      <div class="flip-card-front">
-        <img style="width: 100%; height:22rem" src="{{character.image}}" alt="Avatar">
+
+  <div   class="flip-card d-flex flex-row flex-wrap justify-content-around w-100">
+      <div class="flip-card-inner"  *ngFor="let character of characters | slice:0:25 " style="width: 20rem; height: 22rem;">
+        <div  class="flip-card-front">
+          <img  style="width: 100%; height:22rem" src="{{character.image}}" alt="Avatar">
+        </div>
+        <div  class="flip-card-back">
+          <h1  class="name"> {{character.name}}</h1>
+          <p >Actor : {{character.actor}}</p>
+          <p *ngIf="character.yearOfBirth ">Birth : {{character.yearOfBirth}}</p>
+         <p *ngIf="character.patronus ">Patronus : {{character.patronus}}</p>
+        </div>
       </div>
-      <div class="flip-card-back">
-        <h1 class="name"> {{character.name}}</h1>
-        <p>Actor : {{character.actor}}</p>
-        <p *ngIf="character.yearOfBirth">Birth : {{character.yearOfBirth}}</p>
-        <!-- <div class="patronustitre text-center d-flex flex-row"  *ngIf="character.patronus">Patronus : <p class="patronus pl-2">{{character.patronus}}</p></div> -->
-      </div>
-    </div>
   </div>
+
 
 
 <!--
