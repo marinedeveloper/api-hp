@@ -7,7 +7,7 @@ import { CharactersComponent } from './characters/characters.component';
 
 
 const routes: Routes = [
-  { path: 'characters', component: CharactersComponent},
+  { path: '', component: CharactersComponent},
   {path: 'house/slytherin', component: CharactersSlytherinComponent},
   {path:'house/gryffindor', component: CharactersGryffindorComponent},
   {path:'house/ravenclaw', component: CharactersRavenclawComponent}
